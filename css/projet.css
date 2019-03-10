@@ -1,0 +1,37 @@
+/*-----------------------------*/
+/*-------- PAGE PROJET --------*/
+/*-----------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header#projet_header {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+
+  background: #242430;
+}
+header#projet_header > div {
+  width: 65vh;
+  height: 65vh;
+
+  background-size: cover;
+}
+header#projet_header h1 {
+  position: absolute;
+  font-family: "Assistant_Bold";
+  font-size: 15vw;
+  color: #E32138;
+  line-height: 100%;
+
+  margin: 0;
+}

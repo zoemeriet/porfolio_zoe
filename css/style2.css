@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background: #242430;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+main.works {
+  margin: 0 5vw;
+}
+main.works section {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.photoPresentation {
+  width: 90vw;
+  height: 90vw;
+
+  background-size: cover;
+}
+main.works section h1 {
+  text-align: center;
+  color: #E32138;
+
+  font-size: 5rem;
+}
+main.works section h3 {
+  font-size: 5rem;
+}

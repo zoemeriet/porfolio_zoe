@@ -1,0 +1,356 @@
+Bleu : #1F404D
+Rose : #BE9289
+Beige : #E0E1DF
+Noir : #070707
+
+
+/*----------------------*/
+/*-------- FONT --------*/
+/*----------------------*/
+@font-face {
+ font-family: "Assistant_Light";
+ src: url("../font/Assistant/Assistant-Light.ttf");
+}
+@font-face {
+ font-family: "Assistant";
+ src: url("../font/Assistant/Assistant-Regular.ttf");
+}
+@font-face {
+ font-family: "Assistant_SemiBold";
+ src: url("../font/Assistant/Assistant-SemiBold.ttf");
+}
+@font-face {
+ font-family: "Assistant_Bold";
+ src: url("../font/Assistant/Assistant-Bold.ttf");
+}
+@font-face {
+ font-family: "Vidaloka";
+ src: url("../font/Vidaloka/Vidaloka-Regular.ttf");
+}
+
+@font-face {
+ font-family: "Nunito";
+ src: url("../font/Nunito/Nunito-Regular.ttf");
+}
+@font-face {
+ font-family: "Nunito_Bold";
+ src: url("../font/Nunito/Nunito-SemiBold.ttf");
+}
+
+/*---------------------*/
+/*-------- CSS --------*/
+/*---------------------*/
+* {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, p {
+  margin: 0;
+  font-weight: normal;
+}
+main {
+  position: relative;
+  z-index: 1;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Nunito";
+}
+div.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #DFDFDF;
+  background-image: url('../img/small_background.png');
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  z-index: -3;
+}
+/* ---------------- */
+/* ----- MENU ----- */
+/* ---------------- */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  background: #1f404d;
+  letter-spacing: 3px;
+
+  transform: translateX(100vw);
+  transition: transform 700ms;
+
+  z-index: 10;
+}
+nav div {
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+}
+nav a {
+  font-family: "Vidaloka";
+  font-weight: normal;
+  font-size: 2rem;
+  color: #E0E1DF;
+
+}
+div.active span {
+  background: #E0E1DF;
+}
+div.active span:nth-child(1) {
+  top: 13px;
+  transform: rotate(45deg);
+}
+div.active span:nth-child(2) {
+  transform: scale(0);
+}
+div.active span:nth-child(3) {
+  bottom: 13px;
+  transform: rotate(135deg);
+}
+nav.visible {
+  transform: translateX(0);
+}
+/* ----- BURGER ----- */
+div.burger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 45px;
+  height: 30px;
+
+  z-index: 20;
+  cursor: pointer;
+}
+div.burger span {
+  position: relative;
+  transition: all .5s;
+  display: block;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+
+  background: white;
+}
+
+
+/* ---------------------- */
+/* ------- HEADER ------- */
+/* ---------------------- */
+header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+/* ----- LOGO ----- */
+div.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.logo img {
+  width: 80vw;
+}
+div.logo div.meriet {
+  width: 100%;
+}
+div.logo div.meriet>div {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  font-size: 2.4rem;
+  font-family: "Vidaloka";
+  color: #1F404D;
+}
+
+
+/* ----------------------- */
+/* ------- SECTION ------- */
+/* ----------------------- */
+/*---- SECTION ----*/
+section#work, section#about {
+  position: relative;
+  padding: 1.5rem 0.8rem;
+}
+/*---- TITRE ----*/
+h1 {
+  font-family: "Vidaloka";
+}
+div.title_h2 {
+  position: relative;
+
+  padding: 0.5rem 0;
+  margin: 0.8rem 0;
+}
+div.title_h2 h2 {
+  text-align: center;
+  font-family: "Vidaloka";
+  font-size: 4rem;
+  font-weight: normal;
+  color: white;
+}
+div.line_h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50%;
+
+  background: #1F404D;
+
+  z-index: -1;
+}
+a {
+  overflow: hidden;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+/*---- BOUTON ----*/
+div.button {
+  position: relative;
+
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid black;
+  text-transform: uppercase;
+}
+div.button_hover {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: 100%;
+  height: 100%;
+  background: #BE9289;
+
+  z-index: -1;
+}
+
+/* ----------------------- */
+/* ------- PROJETS ------- */
+/* ----------------------- */
+div.projet_container {
+  margin: 3rem 0;
+}
+/* Image du projet */
+div.projet_img {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+div.work_image {
+  width: 80vw;
+  height: 60vw;
+  background-size: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+section.projets div.work_image {
+  background-image: url('../img/projet/background_restaurant.jpg');
+}
+div.work_number {
+  position: absolute;
+  bottom: -3rem;
+}
+div.work_number p {
+  font-family: "Vidaloka";
+  color: white;
+  font-size: 5rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+/* Texte du projet */
+div.projet_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.projet_text h3 {
+  font-family: "Nunito_Bold";
+  font-size: 2.5rem;
+}
+div.projet_text div.line {
+  width: 150px;
+  height: 3px;
+  background: #1F404D;
+}
+div.projet_text p {
+  margin: 5px 0;
+  text-align: center;
+}
+
+div.pagination {
+  display: none;
+}
+
+/* --------------------- */
+/* ------- ABOUT ------- */
+/* --------------------- */
+section#about {
+  min-height: 100vh;
+}
+div.about_texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.about_texte h3 {
+  font-size: 2.5rem;
+  font-family: "Assistant_SemiBold";
+}
+div.about_texte > p {
+  font-size: 1.5rem;
+}
+div.about_texte > a {
+  margin: 1rem 0;
+}
+div.contact {
+  font-size: 1.5rem;
+  text-align: center;
+}
+div.reseaux_sociaux {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 1rem 0;
+  width: 100%;
+}
+div.reseaux_sociaux a {
+  margin: 0.2rem;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid #BE9289;
+}

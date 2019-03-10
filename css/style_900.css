@@ -1,0 +1,333 @@
+@media screen and (min-width: 900px) {
+  div.title_h2 {
+    display: none;
+  }
+  div.background {
+    background-image: url('../img/background.png');
+    background-size: auto calc(100% + 100px);
+    background-position: bottom left;
+  }
+  div.transition {
+    position: fixed;
+    left: 0;
+
+    width: 100vw;
+    background: #1F404D;
+
+    z-index: 20;
+  }
+  div.transition.active {
+    animation: animTransition 1.6s ease;
+  }
+  @keyframes animTransition {
+      0% {
+        height: 0;
+        top: 100vh;
+      }
+
+      50% {
+        height: 100vh;
+        top: 0;
+      }
+
+      100% {
+        height: 0;
+        top: 0;
+      }
+  }
+
+
+  /* Bouton */
+  div.button_hover {
+    transform: translateX(101%);
+    transition: transform 700ms;
+  }
+  div.button:hover div.button_hover {
+    transform: translateX(0);
+  }
+  /* ---------------- */
+  /* ----- MENU ----- */
+  /* ---------------- */
+  nav {
+    flex-direction: row;
+    width: auto;
+    background: none;
+
+    transform: translateX(0);
+
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  }
+  nav div {
+    margin: 0.8rem;
+  }
+  nav a {
+    color: #1F404D;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+  }
+
+  a.menu__item-name {
+  	position: relative;
+  }
+
+  a.menu__item-name {
+  	padding: 0.35em 0;
+    cursor: pointer;
+  }
+
+  .menu__item-name::before {
+  	content: '';
+  	position: absolute;
+  	z-index: -1;
+  	width: 50%;
+  	height: 100%;
+  	left: 0;
+  	bottom: 0;
+  	transform: scale3d(1,0,0);
+  	transform-origin: 0% 0%;
+  	transition: transform 0.5s;
+  	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+  }
+
+  .menu__item-name::before {
+  	background: #BE9289;
+  }
+
+  /* Hover */
+  .menu__item:hover .menu__item-name::before,
+  .menu__item:focus .menu__item-name::before {
+  	transform: scale3d(1,1,1);
+  }
+  /* ----- BURGER ----- */
+  div.burger {
+    display: none;
+  }
+  /* ---------------------- */
+  /* ------- HEADER ------- */
+  /* ---------------------- */
+  div.logo img {
+    width: 500px;
+  }
+  div.logo div.meriet>div {
+    font-size: 4rem;
+  }
+
+  /* ----------------------- */
+  /* ------- PROJETS ------- */
+  /* ----------------------- */
+  section#work {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    padding: 1rem 4rem;
+  }
+  div.projet_container {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+  }
+  div.projet_img {
+    margin: 0.8rem;
+    width: 45vw;
+  }
+  /* Image du projet */
+  div.work_image {
+    position: relative;
+
+    width: 45vw;
+    height: 33vw;
+
+    overflow: hidden;
+    transform: scale(0.8);
+    transition: transform 0.7s;
+  }
+  div.work_image > div {
+    width: 100%;
+    height: 100%;
+  }
+  div.image_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: #1f404d;
+
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+  div.image_cover:last-child {
+    background: #be9289;
+    transition: transform 0.7s;
+  }
+  div.work_number {
+    left: -4rem;
+    bottom: 1rem;
+
+    overflow: hidden;
+  }
+  div.work_number p {
+    font-size: 10rem;
+
+    transform: translateY(10rem);
+    transition: transform 0.3s;
+  }
+  /* Texte du projet */
+  div.projet_text_container {
+    display: flex;
+    align-items: center;
+
+    margin: 0.8rem;
+    overflow: hidden;
+  }
+  div.projet_text {
+    align-items: flex-start;
+    justify-content: center;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  div.projet_text h3 {
+    font-family: "Vidaloka";
+    font-size: 5rem;
+  }
+  div.projet_text div.line {
+    background: #BE9289;
+  }
+  div.projet_text p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  div.pagination {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+  }
+  div.num_projet {
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 1rem;
+    padding: 0 0.5rem;
+    font-family: "Vidaloka";
+    font-size: 2rem;
+    color: #070707;
+
+    cursor: pointer;
+  }
+  div.num_hover {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+
+    width: 100%;
+    height: 40%;
+    background: #1F404D;
+
+    transform: translateX(-101%);
+    transition: transform 300ms;
+
+    z-index: -1;
+  }
+  div.num_line {
+    width: 15px;
+    height: 3px;
+    border-radius: 3px;
+    background: #070707;
+  }
+  div.num_projet:hover div.num_hover {
+    transform: translateX(0);
+  }
+  div.num_actif div.num_hover {
+    transform: translateX(0);
+  }
+
+
+  div.projet_responsive {
+    display: none;
+  }
+
+/* ----------------- */
+/* ANIMATIONS PROJET */
+/* ----------------- */
+  /* Image */
+  div.projet_actif div.work_image {
+    transform: scale(1);
+    transition: transform 1200ms;
+  }
+  div.projet_actif div.image_cover {
+    transform: translateX(100%);
+    transition: transform 1200ms;
+  }
+  div.projet_actif div.image_cover:last-child {
+    transition: transform 700ms;
+  }
+  /* Numéro */
+  div.projet_actif div.work_number p {
+    transform: translateY(0);
+    transition: transform 700ms;
+    transition-delay: 1000ms;
+  }
+  /* Texte */
+  div.projet_actif div.projet_text {
+    transform: translateX(0);
+    transition: transform 700ms;
+    transition-delay: 1000ms;
+  }
+
+  div.projet_actif div.projet_text div.button_hover {
+    animation: animButton 0.5s ease;
+    animation-delay: 1700ms;
+  }
+
+  /* --------------------- */
+  /* ------- ABOUT ------- */
+  /* --------------------- */
+  section#about {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100vh;
+    padding: 2rem 4rem;
+  }
+  div.about_texte {
+    align-items: flex-start;
+    width: 60vw;
+  }
+  div.about_texte h3 {
+    font-size: 3em;
+    margin: 0.5rem 0;
+  }
+  div.about_texte p {
+    font-size: 1.5rem;
+  }
+  div.contact {
+    text-align: left;
+  }
+  div.reseaux_sociaux {
+    justify-content: flex-start;
+  }
+  div.reseaux_sociaux a {
+    font-size: 1.3rem;
+    color: #070707;
+
+    margin: 1rem;
+    border-bottom: 2px solid #1F404D;
+  }
+}

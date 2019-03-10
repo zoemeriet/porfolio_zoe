@@ -1,0 +1,24 @@
+/*----------------------*/
+/*-------- FONT --------*/
+/*----------------------*/
+@font-face {
+ font-family: "Assistant_Light";
+ src: url("../font/Assistant/Assistant-Light.ttf");
+}
+@font-face {
+ font-family: "Assistant";
+ src: url("../font/Assistant/Assistant-Regular.ttf");
+}
+@font-face {
+ font-family: "Assistant_SemiBold";
+ src: url("../font/Assistant/Assistant-SemiBold.ttf");
+}
+@font-face {
+ font-family: "Assistant_Bold";
+ src: url("../font/Assistant/Assistant-Bold.ttf");
+}
+
+@font-face {
+ font-family: "Vidaloka";
+ src: url("../font/Vidaloka/Vidaloka-Regular.ttf");
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/style_900.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="transition"></div>
+
+    <main>
+      <header id="home">
+        <div class="menu">
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav>
+            <div class="menu__item" data-target="#home"><a class="menu__item-name">Accueil</a></div>
+            <div class="menu__item" data-target="#work"><a class="menu__item-name">Projets</a></div>
+            <div class="menu__item" data-target="#about"><a class="menu__item-name">A Propos</a></div>
+          </nav>
+        </div>
+
+        <div class="logo">
+          <div class="zoe">
+            <img class="logo_black" src="img/logo.svg" alt="logo zoe">
+          </div>
+          <div class="meriet">
+            <div>
+              <div>M</div>
+              <div>E</div>
+              <div>R</div>
+              <div>I</div>
+              <div>E</div>
+              <div>T</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <section class="projets" id="work">
+        <div class="title_h2">
+          <h2>Projets</h2>
+          <div class="line_h2"></div>
+        </div>
+
+        <div class="projet_container projet_actif">
+          <div class="projet_img">
+            <div class="work_image" style="background-image: url('img/projet/background_restaurant.jpg');">
+              <div>
+                <div class="image_cover"></div>
+                <div class="image_cover"></div>
+              </div>
+            </div>
+            <div class="work_number">
+              <p>01</p>
+            </div>
+          </div>
+
+          <div class="projet_text_container">
+            <div class="projet_text">
+              <h3>Restaurant</h3>
+              <div class="line"></div>
+              <p>Site fictif d'un restaurant. Réalisé en HTML/CSS</p>
+              <a href="http://restaurant.zoemeriet.com/" target="_blank">
+                <div class="button">
+                  <span>Voir la demo</span>
+                  <div class="button_hover"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="projet_container projet_actif projet_responsive">
+          <div class="projet_img">
+            <div class="work_image" style="background-image: url('img/projet/background_gite.jpg');">
+              <div>
+                <div class="image_cover"></div>
+                <div class="image_cover"></div>
+              </div>
+            </div>
+            <div class="work_number">
+              <p>02</p>
+            </div>
+          </div>
+
+          <div class="projet_text_container">
+            <div class="projet_text">
+              <h3>Gîte Entre Nous</h3>
+              <div class="line"></div>
+              <p>Site Internet réalisé avec Wordpress</p>
+              <a href="https://gite-entrenous.com/" target="_blank">
+                <div class="button">
+                  <span>Voir le site</span>
+                  <div class="button_hover"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <div id="projet1" class="num_projet num_actif"><div class="num_hover"></div>
+            01
+          </div>
+          <div class="num_line"></div>
+          <div id="projet2" class="num_projet"><div class="num_hover"></div>
+            02
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="about_texte">
+          <div class="title_h2">
+            <h2>À Propos</h2>
+            <div class="line_h2"></div>
+          </div>
+
+          <h3>Zoé Meriet</h3>
+          <p>
+            Étudiante dans le domaine du digital, je suis pasionnée par le développement web et je suis située à Nantes.
+            Si vous souhaitez en savoir plus sur moi ou pour toute demande, n’hésitez pas à me contacter.
+          </p>
+          <a href="#" target="_blank">
+            <div class="button">
+              Télécharger le CV
+              <div class="button_hover"></div>
+            </div>
+          </a>
+          <div class="contact">
+            <p>06 48 43 39 89</p>
+            <p>info@zoemeriet.com</p>
+          </div>
+          <div class="reseaux_sociaux">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Linkedin</a>
+            <a href="#">Dribbble</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="js/main.js" charset="utf-8"></script>
+</html>
